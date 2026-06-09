@@ -8,16 +8,18 @@ import org.hibernate.cfg.Configuration;
 public class update_Delete {
     static void main() {
         Student s1 = new Student();
-        s1.setRoll(24);
-        s1.setAge(43);
-        s1.setName("meena");
+//        s1.setRoll(32);
+//        s1.setAge(53);
+//        s1.setName("Ronit");
         Configuration cfg = new Configuration();
         cfg.addAnnotatedClass(com.Mohit.Student.class);
         cfg.configure();
         SessionFactory sf = cfg.buildSessionFactory();
         Session ss = sf.openSession();
+        s1 = ss.find(Student.class,32);
         Transaction tt = ss.beginTransaction();
-        ss.merge(s1);
+
+        ss.remove(s1);
         tt.commit();
         ss.close();
         sf.close();
