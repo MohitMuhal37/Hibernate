@@ -28,4 +28,13 @@ public class newClass {
     public void setAid(int aid) {
         this.aid = aid;
     }
+
+    @Override
+    public String toString() {
+        return "newClass{" +
+                "aid=" + aid +
+                ", aname='" + aname + '\'' +
+                ", tech='" + tech + '\'' +
+                '}';
+    }
 }
