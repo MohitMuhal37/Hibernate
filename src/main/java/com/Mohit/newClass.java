@@ -1,9 +1,15 @@
 package com.Mohit;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class newClass {
+    @Id
         private int aid;
         private String aname;
         private String tech;
+
 
     public String getTech() {
         return tech;
