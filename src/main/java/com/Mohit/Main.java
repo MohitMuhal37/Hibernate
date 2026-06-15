@@ -11,9 +11,9 @@ public class Main {
     public static void main() throws Exception{
 
         newClass nc = new newClass();
-        nc.setAid(101);
-        nc.setAname("Max");
-        nc.setTech("CSE");
+        nc.setAid(1);
+        nc.setAname("Mat");
+        nc.setTech("MME");
 
 
         Configuration cfg = new Configuration();
@@ -21,6 +21,7 @@ public class Main {
         cfg.configure();
         SessionFactory sf = cfg.buildSessionFactory();
         Session ss = sf.openSession();
+        ss.persist(nc);
         ss.close();
         sf.close();
     }
