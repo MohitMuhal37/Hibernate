@@ -26,8 +26,8 @@ public class Main {
         SessionFactory sf = cfg.buildSessionFactory();
         Session ss = sf.openSession();
         Transaction tt = ss.beginTransaction();
-        ss.persist(nc);
-        tt.commit();
+//        ss.persist(nc);
+//        tt.commit();
 
         newClass n = ss.find(newClass.class,1);
         System.out.println(n);
