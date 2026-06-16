@@ -1,5 +1,8 @@
 package com.Mohit;
 
+import jakarta.persistence.Embeddable;
+
+@Embeddable
 public class laptop {
         private String brand;
         private String model;
