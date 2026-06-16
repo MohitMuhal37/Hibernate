@@ -9,7 +9,7 @@ public class newClass {
         private int aid;
         private String aname;
         private String tech;
-
+        private laptop laptop;
 
     public String getTech() {
         return tech;
@@ -35,12 +35,21 @@ public class newClass {
         this.aid = aid;
     }
 
+    public laptop getLaptop() {
+        return laptop;
+    }
+
+    public void setLaptop(laptop laptop) {
+        this.laptop = laptop;
+    }
+
     @Override
     public String toString() {
         return "newClass{" +
                 "aid=" + aid +
                 ", aname='" + aname + '\'' +
                 ", tech='" + tech + '\'' +
+                ", laptop=" + laptop +
                 '}';
     }
 }

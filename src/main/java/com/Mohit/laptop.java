@@ -3,7 +3,7 @@ package com.Mohit;
 public class laptop {
         private String brand;
         private String model;
-        private laptop laptop;
+        private int ram;
 
     public String getBrand() {
         return brand;
@@ -21,12 +21,12 @@ public class laptop {
         this.model = model;
     }
 
-    public laptop laptop() {
-        return laptop;
+    public int getRam() {
+        return ram;
     }
 
-    public void setlaptop(laptop laptop) {
-        this.laptop = laptop;
+    public void setRam(int ram) {
+        this.ram = ram;
     }
 
     @Override
@@ -34,7 +34,7 @@ public class laptop {
         return "laptop{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
-                ", ram=" + laptop +
+                ", ram=" + ram +
                 '}';
     }
 }
