@@ -25,7 +25,12 @@ public class Main {
         cfg.configure();
         SessionFactory sf = cfg.buildSessionFactory();
         Session ss = sf.openSession();
+        Transaction tt = ss.beginTransaction();
         ss.persist(nc);
+        tt.commit();
+
+        newClass n = ss.find(newClass.class,1);
+        System.out.println(n);
         ss.close();
         sf.close();
     }
