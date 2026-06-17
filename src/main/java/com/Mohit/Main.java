@@ -5,6 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
+
 //import java.lang.module.Configuration;
 
 public class Main {
@@ -14,11 +16,17 @@ public class Main {
         l1.setLid(1);
         l1.setModel("i9");
         l1.setRam(16);
+
+        laptop l2 = new laptop();
+        l2.setBrand("Dell");
+        l2.setLid(2);
+        l2.setModel("i7");
+        l2.setRam(16);
         newClass nc = new newClass();
         nc.setAid(1);
         nc.setAname("Mat");
         nc.setTech("MME");
-        nc.setLaptop(l1);
+        nc.setLaptops(List.of(l1,l2));
 
 
         Configuration cfg = new Configuration();
