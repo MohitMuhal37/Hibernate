@@ -2,6 +2,7 @@ package com.Mohit;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class newClass {
@@ -9,6 +10,7 @@ public class newClass {
         private int aid;
         private String aname;
         private String tech;
+        @OneToOne
         private laptop laptop;
 
     public String getTech() {
