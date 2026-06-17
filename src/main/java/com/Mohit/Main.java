@@ -11,6 +11,7 @@ public class Main {
     public static void main() throws Exception{
         laptop l1 = new laptop();
         l1.setBrand("HP");
+        l1.setLid(1);
         l1.setModel("i9");
         l1.setRam(16);
         newClass nc = new newClass();
@@ -21,13 +22,14 @@ public class Main {
 
 
         Configuration cfg = new Configuration();
-        cfg.addAnnotatedClass(com.Mohit.newClass.class);
+        cfg.addAnnotatedClass(com.Mohit.newClass.class).addAnnotatedClass(com.Mohit.laptop.class);
         cfg.configure();
         SessionFactory sf = cfg.buildSessionFactory();
         Session ss = sf.openSession();
         Transaction tt = ss.beginTransaction();
-//        ss.persist(nc);
-//        tt.commit();
+        ss.persist(l1);
+        ss.persist(nc);
+        tt.commit();
 
         newClass n = ss.find(newClass.class,1);
         System.out.println(n);
