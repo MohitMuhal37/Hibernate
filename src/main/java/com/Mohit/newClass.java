@@ -10,7 +10,7 @@ public class newClass {
         private int aid;
         private String aname;
         private String tech;
-        @OneToMany
+        @OneToMany(mappedBy = "newClass")
         private List<laptop> laptops;
 
     public String getTech() {
