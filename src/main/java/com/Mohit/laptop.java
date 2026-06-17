@@ -16,6 +16,14 @@ public class laptop {
         @ManyToOne
         private newClass newClass;
 
+    public newClass getNewClass() {
+        return newClass;
+    }
+
+    public void setNewClass(newClass newClass) {
+        this.newClass = newClass;
+    }
+
     public String getBrand() {
         return brand;
     }
