@@ -27,7 +27,8 @@ public class Main {
         nc.setAname("Mat");
         nc.setTech("MME");
         nc.setLaptops(List.of(l1,l2));
-
+        l1.setNewClass(nc);
+        l2.setNewClass(nc);
 
         Configuration cfg = new Configuration();
         cfg.addAnnotatedClass(com.Mohit.newClass.class).addAnnotatedClass(com.Mohit.laptop.class);
