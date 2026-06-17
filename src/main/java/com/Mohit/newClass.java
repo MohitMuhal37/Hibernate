@@ -1,5 +1,5 @@
 package com.Mohit;
-
+import java.util.List;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
@@ -11,7 +11,7 @@ public class newClass {
         private String aname;
         private String tech;
         @OneToOne
-        private laptop laptop;
+        private List<laptop> laptops;
 
     public String getTech() {
         return tech;
@@ -37,12 +37,12 @@ public class newClass {
         this.aid = aid;
     }
 
-    public laptop getLaptop() {
-        return laptop;
+    public List<laptop> getLaptops() {
+        return laptops;
     }
 
-    public void setLaptop(laptop laptop) {
-        this.laptop = laptop;
+    public void setLaptops(List<laptop> laptops) {
+        this.laptops = laptops;
     }
 
     @Override
@@ -51,7 +51,7 @@ public class newClass {
                 "aid=" + aid +
                 ", aname='" + aname + '\'' +
                 ", tech='" + tech + '\'' +
-                ", laptop=" + laptop +
+                ", laptops=" + laptops +
                 '}';
     }
 }
