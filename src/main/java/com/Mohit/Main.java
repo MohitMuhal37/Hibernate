@@ -36,6 +36,7 @@ public class Main {
         Session ss = sf.openSession();
         Transaction tt = ss.beginTransaction();
         ss.persist(l1);
+        ss.persist(l2);
         ss.persist(nc);
         tt.commit();
 
