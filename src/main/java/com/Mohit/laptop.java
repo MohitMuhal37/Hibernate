@@ -1,9 +1,14 @@
 package com.Mohit;
 
 import jakarta.persistence.Embeddable;
+import jakarta.persistence.Id;
+import jakarta.persistence.Entity;
 
-@Embeddable
+
+@Entity
 public class laptop {
+        @Id
+        private int lid;
         private String brand;
         private String model;
         private int ram;
