@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.util.Arrays;
 import java.util.List;
 
 //import java.lang.module.Configuration;
@@ -42,10 +43,13 @@ public class Main {
         nc.setAid(3);
         nc.setAname("Marry");
         nc.setTech("CSE");
-        nc.setLaptops(List.of(l1,l2));
-        nc1.setLaptops(List.of(l1,l3));
-        nc2.setLaptops(List.of(l1,l2,l3));
+        nc.setLaptops(Arrays.asList(l1,l2));
+        nc1.setLaptops(Arrays.asList(l1,l3));
+        nc2.setLaptops(Arrays.asList(l1,l2,l3));
 
+        l1.setNewClass(Arrays.asList(nc,nc1,nc2));
+        l2.setNewClass(Arrays.asList(nc,nc2));
+        l3.setNewClass(Arrays.asList(nc1,nc2));
         Configuration cfg = new Configuration();
         cfg.addAnnotatedClass(com.Mohit.newClass.class).addAnnotatedClass(com.Mohit.laptop.class);
         cfg.configure();
