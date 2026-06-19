@@ -23,18 +23,28 @@ public class Main {
         l2.setModel("i7");
         l2.setRam(16);
 
-        laptop l2 = new laptop();
-        l2.setBrand("Dell");
-        l2.setLid(2);
-        l2.setModel("i7");
-        l2.setRam(16);
+        laptop l3 = new laptop();
+        l3.setBrand("Lenovo");
+        l3.setLid(3);
+        l3.setModel("i9");
+        l3.setRam(32);
         newClass nc = new newClass();
         nc.setAid(1);
         nc.setAname("Mat");
         nc.setTech("MME");
+
+        newClass nc1 = new newClass();
+        nc.setAid(2);
+        nc.setAname("Max");
+        nc.setTech("CSE");
+
+        newClass nc2 = new newClass();
+        nc.setAid(3);
+        nc.setAname("Marry");
+        nc.setTech("CSE");
         nc.setLaptops(List.of(l1,l2));
-        l1.setNewClass(nc);
-        l2.setNewClass(nc);
+        nc1.setLaptops(List.of(l1,l3));
+        nc2.setLaptops(List.of(l1,l2,l3));
 
         Configuration cfg = new Configuration();
         cfg.addAnnotatedClass(com.Mohit.newClass.class).addAnnotatedClass(com.Mohit.laptop.class);
