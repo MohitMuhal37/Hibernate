@@ -35,14 +35,15 @@ public class Main {
         nc.setTech("MME");
 
         newClass nc1 = new newClass();
-        nc.setAid(2);
-        nc.setAname("Max");
-        nc.setTech("CSE");
+        nc1.setAid(2);
+        nc1.setAname("Max");
+        nc1.setTech("CSE");
 
         newClass nc2 = new newClass();
-        nc.setAid(3);
-        nc.setAname("Marry");
-        nc.setTech("CSE");
+        nc2.setAid(3);
+        nc2.setAname("Marry");
+        nc2.setTech("CSE");
+
         nc.setLaptops(Arrays.asList(l1,l2));
         nc1.setLaptops(Arrays.asList(l1,l3));
         nc2.setLaptops(Arrays.asList(l1,l2,l3));
@@ -65,8 +66,8 @@ public class Main {
         ss.persist(nc2);
         tt.commit();
 
-        newClass n1 = ss.find(newClass.class,2);
-        System.out.println(n1);
+        newClass n = ss.find(newClass.class,2);
+        System.out.println(n);
         ss.close();
         sf.close();
     }
