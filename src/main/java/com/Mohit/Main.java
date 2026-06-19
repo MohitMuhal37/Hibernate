@@ -58,11 +58,15 @@ public class Main {
         Transaction tt = ss.beginTransaction();
         ss.persist(l1);
         ss.persist(l2);
+        ss.persist(l3);
+
         ss.persist(nc);
+        ss.persist(nc1);
+        ss.persist(nc2);
         tt.commit();
 
-        newClass n = ss.find(newClass.class,1);
-        System.out.println(n);
+        newClass n1 = ss.find(newClass.class,2);
+        System.out.println(n1);
         ss.close();
         sf.close();
     }
