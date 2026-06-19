@@ -22,6 +22,12 @@ public class Main {
         l2.setLid(2);
         l2.setModel("i7");
         l2.setRam(16);
+
+        laptop l2 = new laptop();
+        l2.setBrand("Dell");
+        l2.setLid(2);
+        l2.setModel("i7");
+        l2.setRam(16);
         newClass nc = new newClass();
         nc.setAid(1);
         nc.setAname("Mat");
