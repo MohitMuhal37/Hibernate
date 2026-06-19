@@ -1,9 +1,8 @@
 package com.Mohit;
 
-import jakarta.persistence.Embeddable;
-import jakarta.persistence.Id;
-import jakarta.persistence.Entity;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
+
+import java.util.List;
 
 
 @Entity
@@ -13,16 +12,10 @@ public class laptop {
         private String brand;
         private String model;
         private int ram;
-        @ManyToOne
-        private newClass newClass;
+        @ManyToMany
+        private List<newClass> newClass;
 
-    public newClass getNewClass() {
-        return newClass;
-    }
 
-    public void setNewClass(newClass newClass) {
-        this.newClass = newClass;
-    }
 
     public String getBrand() {
         return brand;
