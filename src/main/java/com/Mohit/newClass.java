@@ -2,6 +2,7 @@ package com.Mohit;
 import java.util.List;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.OneToMany;
 
 @Entity
@@ -10,7 +11,7 @@ public class newClass {
         private int aid;
         private String aname;
         private String tech;
-        @OneToMany(mappedBy = "newClass")
+        @ManyToMany
         private List<laptop> laptops;
 
     public String getTech() {
