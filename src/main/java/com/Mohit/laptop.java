@@ -15,7 +15,13 @@ public class laptop {
         @ManyToMany
         private List<newClass> newClass;
 
+    public List<newClass> getNewClass() {
+        return newClass;
+    }
 
+    public void setNewClass(List<newClass> newClass) {
+        this.newClass = newClass;
+    }
 
     public String getBrand() {
         return brand;
